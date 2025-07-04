@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+  /* Typography */
+  --FF: "Poppins", sans-serif;
+  --FS: 1rem;
+  --FSH: 2rem;
+  /* Colors */
+  /* Primary */
+  --Purple-500: hsl(259, 100%, 65%);
+  --Red-400: hsl(0, 100%, 67%);
+  /* Neutral */
+  --White: hsl(0, 100%, 100%);
+  --Grey-100: hsl(0, 0%, 94%);
+  --Grey-200: hsl(0, 0%, 86%);
+  --Grey-500: hsl(0, 1%, 44%);
+  --Black: hsl(0, 0%, 0%);
+
+  /* comments */
+  /* --white: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-950: hsl(292, 42%, 14%);
+  --darkorchid: hsl(280, 61%, 50%);
+  --purple: #645cff;
+  --grey-900: #0f172a;
+  --grey-50: #f8fafc;  */
+}
+
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  font-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: var(--FSH);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  /* transition: background-color 3s ease-in-out; */
+  /* transition: color 3s ease-in-out; */
+  min-height: 100vh;
+  line-height: 1;
+  font-optical-sizing: auto;
+  background-color: var(--Grey-200);
+  color: var(--Grey-500);
+  font-family: var(--FF);
+  font-size: var(--FS);
+  font-weight: 400;
+  display: flex;
+  padding: 3rem 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* content style */
+.container {
+  max-width: 900px;
+  width: 90%;
+  border-radius: 15px 15px 50px 15px;
+  background-color: var(--White);
+  box-shadow: 0 10px 15px -3px rgba(61, 8, 8, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  padding: 1.5rem 1rem;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+}
+
+.input-content {
+  width: 100%;
+}
+
+.input-content p {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.input-content input {
+  border: solid 4px var(--Grey-100);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 80%;
+  color: var(--Black);
+}
+
+input::placeholder {
+  color: black;
+}
+
+.error {
+  color: var(--Red-400);
+  margin-top: 0.2rem;
+  display: none;
+  font-size: 0.7rem;
+}
+
+.display-container {
+  position: relative;
+}
+
+.border {
+  box-shadow: 0 -4px 6px -4px rgba(0, 0, 0, 0.3);
+  margin-top: 3rem;
+  border-top: 5px solid var(--Grey-200);
+  opacity: 30%;
+}
+
+.display-content {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.display-content h2 {
+  color: var(--Purple-500);
+}
+.display-content p {
+  align-self: center;
+  font-weight: 800;
+  color: var(--Black);
+}
+
+.btn {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--Purple-500);
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+/* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out all; */
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  body {
+    padding: 5rem 0;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+
+  .btn {
+    margin-right: 0;
+  }
+}

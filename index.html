@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
+    <title>Age-Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- date of birth input -->
+      <section class="article-container">
+        <article class="input-content">
+          <p class="day">Day</p>
+          <input
+            type="number"
+            name="date"
+            class="dateInput"
+            placeholder="DD"
+            min="1"
+            max="31"
+          />
+          <p class="error"></p>
+        </article>
+        <article class="input-content">
+          <p class="month">Month</p>
+          <input
+            type="number"
+            name="date"
+            class="monthInput"
+            placeholder="MM"
+            min="1"
+            max="12"
+          />
+          <p class="error"></p>
+        </article>
+        <article class="input-content">
+          <p class="year">Year</p>
+          <input
+            type="number"
+            name="date"
+            class="yearInput"
+            placeholder="YYYY"
+            min="1900"
+          />
+          <p class="error"></p>
+        </article>
+      </section>
+      <!-- display date of bairth -->
+      <section class="display-container">
+        <div class="border"></div>
+        <div class="display-content">
+          <h2 class="displayYears">--</h2>
+          <p>years</p>
+        </div>
+        <div class="display-content">
+          <h2 class="displayMonths">--</h2>
+          <p>months</p>
+        </div>
+        <div class="display-content">
+          <h2 class="displayDays">--</h2>
+          <p>days</p>
+        </div>
+        <!-- button -->
+        <img src="images/icon-arrow.svg" alt="button" class="btn" />
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
